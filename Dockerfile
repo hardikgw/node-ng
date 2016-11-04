@@ -6,9 +6,12 @@ RUN\
 	apt-get update &&\
 	apt-get install -y vim curl wget sudo default-jdk lsof git ntp &&\
 	apt-get update &&\
-	apt-get clean
+	apt-get clean &&\
+	apt-get -y upgrade
 RUN curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 RUN sudo apt-get install -y nodejs
 RUN npm uninstall -g watchman
 RUN npm install -g angular-cli
+RUN touch start.sh
+RUN echo >> "ng serve --host 0.0.0.0 --port 4200"
 EXPOSE 3000
