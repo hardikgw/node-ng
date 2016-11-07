@@ -1,7 +1,7 @@
 import { MaterialModule } from '@angular/material';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule }   from '@angular/router';
+import { appRouting, appRoutingProviders } from './app.routes';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
@@ -17,12 +17,14 @@ import { AboutComponent } from './about/about.component';
   ],
   imports: [
     MaterialModule.forRoot(),
-    RouterModule.forRoot(),
     BrowserModule,
     FormsModule,
+    appRouting,
     HttpModule
   ],
-  providers: [],
+  providers: [
+    appRoutingProviders,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
