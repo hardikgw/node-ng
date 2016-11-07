@@ -1,3 +1,26 @@
-<h1>
-  {{title}}
-</h1>
+<div>
+  <md-toolbar color="primary">
+    <button md-icon-button>
+      <!--<md-icon class="md-24" >menu</md-icon>-->
+    </button>
+    {{title}}
+  </md-toolbar>
+</div>
+<div>
+  <md-tab-group [selectedIndex]="1">
+    <md-tab>
+      <template md-tab-label>One</template>
+      <template md-tab-content>
+        <h1>Some tab content</h1>
+        <p>...</p>
+      </template>
+    </md-tab>
+    <md-tab>
+      <template md-tab-label>Two</template>
+      <template md-tab-content>
+        <h1>Some more tab content</h1>
+        <p>...</p>
+      </template>
+    </md-tab>
+  </md-tab-group>
+</div>
