@@ -9,7 +9,7 @@ RUN\
 	apt-get clean &&\
 	apt-get -y upgrade
 RUN curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
-RUN sudo apt-get install -y nodejs
+RUN sudo apt-get install -y nodejs openssh-server
 RUN npm install -g watchman
 RUN npm install -g angular-cli
 RUN touch start.sh &&\
